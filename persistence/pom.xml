@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>br.com.lucasfuck</groupId>
-    <artifactId>usecase</artifactId>
+    <artifactId>persistence</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>usecase</name>
+    <name>persistence</name>
     <description>Demo project for Spring Boot</description>
 
     <parent>
@@ -44,12 +44,7 @@
 
         <dependency>
             <groupId>br.com.lucasfuck</groupId>
-            <artifactId>input</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>br.com.lucasfuck</groupId>
-            <artifactId>persistence</artifactId>
+            <artifactId>output</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>

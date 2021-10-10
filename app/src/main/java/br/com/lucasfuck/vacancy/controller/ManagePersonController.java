@@ -1,8 +1,9 @@
 package br.com.lucasfuck.vacancy.controller;
 
 import br.com.lucasfuck.dto.PersonDTO;
-import br.com.lucasfuck.port.input.ManagePerson;
+import br.com.lucasfuck.port.input.ManagePersonInputPort;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,20 +15,20 @@ import javax.validation.Valid;
 @RequestMapping("/person")
 public class ManagePersonController {
 
-    private final ManagePerson managePerson;
+    private final ManagePersonInputPort managePersonInputPort;
 
-    public ManagePersonController(ManagePerson managePerson) {
-        this.managePerson = managePerson;
+    public ManagePersonController(ManagePersonInputPort managePersonInputPort) {
+        this.managePersonInputPort = managePersonInputPort;
     }
 
     @PostMapping
     public void createPerson(@Valid @RequestBody PersonDTO personDTO) {
-        managePerson.create(personDTO);
+        managePersonInputPort.create(personDTO);
     }
 
-    @DeleteMapping
-    public void removePerson(@Valid @RequestBody String identifier) {
-        managePerson.remove(identifier);
+    @DeleteMapping(path = "/{identifier}")
+    public void removePerson(@PathVariable("identifier") String identifier) {
+        managePersonInputPort.remove(identifier);
     }
 
 }

@@ -16,7 +16,10 @@
 	<modules>
 		<module>app</module>
 		<module>usecase</module>
-		<module>port</module>
+		<module>input</module>
+		<module>output</module>
+		<module>persistence</module>
+		<module>model</module>
 	</modules>
 
 </project>
