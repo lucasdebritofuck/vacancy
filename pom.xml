@@ -16,6 +16,7 @@
 	<modules>
 		<module>app</module>
 		<module>usecase</module>
+		<module>port</module>
 	</modules>
 
 </project>
