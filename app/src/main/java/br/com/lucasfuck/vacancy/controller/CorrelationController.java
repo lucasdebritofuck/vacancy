@@ -1,7 +1,6 @@
 package br.com.lucasfuck.vacancy.controller;
 
 import br.com.lucasfuck.dto.CorrelationDTO;
-import br.com.lucasfuck.dto.PersonCorrelationDTO;
 import br.com.lucasfuck.port.input.CorrelationInputPort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,5 +25,5 @@ public class CorrelationController {
     public CorrelationDTO create(@Valid @RequestBody CorrelationDTO correlationDTO) {
         return correlationInputPort.create(correlationDTO);
     }
-    
+
 }
