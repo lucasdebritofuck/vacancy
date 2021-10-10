@@ -1,17 +1,17 @@
 package br.com.lucasfuck.vacancy.model.service;
 
 import br.com.lucasfuck.port.PersonOutputPort;
-import br.com.lucasfuck.port.input.ManageHierarchy;
+import br.com.lucasfuck.port.input.HierarchyInputPort;
 import br.com.lucasfuck.vacancy.entity.Person;
 import br.com.lucasfuck.vacancy.model.exception.IllegalParentOverrideException;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ManageHierarchyService implements ManageHierarchy {
+public class HierarchyService implements HierarchyInputPort {
 
     private final PersonOutputPort personOutputPort;
 
-    public ManageHierarchyService(PersonOutputPort personOutputPort) {
+    public HierarchyService(PersonOutputPort personOutputPort) {
         this.personOutputPort = personOutputPort;
     }
 

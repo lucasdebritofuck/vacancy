@@ -26,8 +26,8 @@ public class PersonPersistenceAdapter implements PersonOutputPort {
     }
 
     @Override
-    public void save(Person person) {
-        personRepository.save(person);
+    public Person save(Person person) {
+        return personRepository.save(person);
     }
 
     @Override

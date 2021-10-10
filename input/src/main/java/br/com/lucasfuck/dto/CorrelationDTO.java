@@ -8,9 +8,8 @@ import javax.validation.constraints.NotBlank;
 
 @Getter @Setter
 @NoArgsConstructor
-public class HierarchyDTO {
+public class CorrelationDTO {
 
-    @NotBlank private String childIdentifier;
-    private String parentIdentifier;
+    @NotBlank private String name;
 
 }
