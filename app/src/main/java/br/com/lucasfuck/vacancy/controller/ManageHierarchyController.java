@@ -11,11 +11,11 @@ import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/hierarchy")
-public class ManagerHierarchyController {
+public class ManageHierarchyController {
 
     private final ManageHierarchy manageHierarchy;
 
-    public ManagerHierarchyController(ManageHierarchy manageHierarchy) {
+    public ManageHierarchyController(ManageHierarchy manageHierarchy) {
         this.manageHierarchy = manageHierarchy;
     }
 
